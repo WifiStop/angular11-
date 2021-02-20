@@ -1,0 +1,30 @@
+{
+  "id": "2343482",
+  "name": "MobileComponents",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10097949",
+      "name": "旋转",
+      "font_class": "xuanzhuan",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "16859933",
+      "name": "按钮",
+      "font_class": "button",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "839002",
+      "name": "圆点",
+      "font_class": "yuandian",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    }
+  ]
+}
