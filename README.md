@@ -17,3 +17,6 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 预览地址
+https://wifistop.github.io/angular11-configuration-panel/homePage
