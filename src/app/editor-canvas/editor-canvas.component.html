@@ -1,0 +1,19 @@
+<div class="big-canvas" id="bigCanvas" [ngStyle]="{width:canvasSize.width+'px',height:canvasSize.height+'px'}" (dragover)="dragOver($event)" (drop)="handleDrop($event)" (contextmenu)="handleContextmenu($event)" (click)="setCurrentComponent()">
+                <ng-container style="display: block;">
+                        <ng-container *ngFor="let component of componentDataList">
+                                <ng-container [ngSwitch]="component.componentType">
+                                        <ng-container *ngSwitchCase="'text'" >
+                                               <app-text-view [data]="component" (showMenu)="showMenu($event)"></app-text-view>
+                                            </ng-container>
+                                            <ng-container *ngSwitchCase="'button'" >
+                                                <app-button-view [data]="component" (showMenu)="showMenu($event)"></app-button-view>
+                                            </ng-container>
+                                            <ng-container *ngSwitchCase="'Picture'" >
+                                                <app-img-view [data]="component" (showMenu)="showMenu($event)"></app-img-view>
+                                            </ng-container>
+                                </ng-container>
+                        </ng-container>
+                </ng-container>
+              
+        <app-right-click-view *ngIf="isShowMenu" [ngStyle]="getStyle(position)" (pasteComponent)="pasteComponent()" [data]="data" [isCanvas]="isCanvas"></app-right-click-view>
+</div>

@@ -1,0 +1,34 @@
+<div class="animation" *ngIf="componentData?.style['z-index']">
+  <div class="animation-button">
+    <button (click)="visible=true">添加动画</button>
+    <button (click)="previewAnimation()">预览动画</button>
+  </div>
+  <div class="animation-tag">
+    <div *ngFor="let animation of componentData.animations; let i = index">
+      <nz-tag  nzMode="closeable"  [nzColor]="'blue'" (nzOnClose)="handleClose(i)">
+        {{animation.label}}
+       </nz-tag>
+    </div>
+    
+  </div>
+  <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left"  (nzOnClose)="close()" [nzWidth]="390">
+      
+    <ng-container *nzDrawerContent>
+        <nz-tabset [nzSize]="'small'" style="height: 100%;">
+            <nz-tab *ngFor="let animationType of animationList" [nzTitle]="animationType.label">
+                
+                <div class="animation-box">
+                    <div  *ngFor="let animation of animationType.children" style="cursor: pointer;" class="{{animation.status==true?animation.value:''}} animated"  (mouseenter)="changeAuth(animation)"  (animationend)="animationend(animation)" (click)="addAnimation(animation)">
+                        {{animation.label}}
+                    </div>
+                </div>
+                    
+            </nz-tab>
+          </nz-tabset>
+    </ng-container>
+  </nz-drawer>
+</div>
+<div *ngIf="!componentData?.style['z-index']">
+    请先选择组件
+    </div>
+

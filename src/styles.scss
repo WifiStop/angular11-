@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/style/index.min.css"; /* 引入基本样式 */
+@import "~ng-zorro-antd/button/style/index.min.css"; /* 引入组件样式 */
+@import "~ng-zorro-antd/input/style/index.min.css"; /* 引入组件样式 */
+@import "~ng-zorro-antd/tabs/style/index.min.css"; /* 引入组件样式 */
+@import "~ng-zorro-antd/select/style/index.min.css"; /* 引入组件样式 */
+@import "~ng-zorro-antd/tag/style/index.min.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "~ng-zorro-antd/drawer/style/index.min.css";
+@import "./assets/iconfont/iconfont.css";
+body{
+    margin: 0;
+}
+body,
+button,
+input,
+p,
+li,
+ol,
+ul,
+div,
+section,
+article,
+td,
+th,
+span,
+textarea,
+form,
+footer,
+header,
+nav,
+main,
+address,
+aside,
+pre,
+canvas {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    height: 35px;
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #606266;
+    border: 1px solid #ddd;
+    line-height:normal;
+    &:focus{
+        outline: none;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+    color: #409EFF;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+span{
+    font-size: 14px;
+    color: #606266;
+    line-height:normal;
+}
+textarea{
+    resize: none;
+}
+button,textarea,ul{
+    outline: none;
+}
+::-webkit-scrollbar{
+    width:8px !important;
+    height: 8px !important;
+  }
+  ::-webkit-scrollbar-thumb{background-color:#d8d8d8;width: 5px;border-radius: 10px !important;}
+
+

@@ -1,0 +1,15 @@
+.attributes{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: calc(100vh - 124px);
+    div{
+        margin-bottom: 10px;
+    }
+    span{
+        display: block;
+    }
+    input{
+        width: 165px;
+    }
+}

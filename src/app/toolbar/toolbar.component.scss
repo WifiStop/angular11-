@@ -1,0 +1,20 @@
+.toolbar{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    line-height: 50px;
+    button{
+        margin-left: 10px;
+
+    }
+    span{
+        font-size: 14px;
+        margin: 10px;
+    }
+    input{
+        line-height:normal;
+        width: 50px;
+        color: #606266;
+        font-size: 12px;
+    }   
+}

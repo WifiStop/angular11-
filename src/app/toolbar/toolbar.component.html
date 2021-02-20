@@ -1,0 +1,12 @@
+<div class="toolbar">
+  <button class="button" (click)="Revoke()">撤销</button>
+  <button class="button" (click)="Redo()">重做</button>
+  <button class="button">插入图片</button>
+  <button class="button" (click)="preview()">预览</button>
+  <button class="button" (click)="save()">保存</button>
+  <button class="button" (click)="cleatCanvas()">清空画布</button>
+  <span>画布大小</span>
+  <input nz-input nzSize="small" [(ngModel)]="canvasSize.width"/>
+  <span>*</span>
+  <input nz-input nzSize="small" [(ngModel)]="canvasSize.height"/>
+</div>

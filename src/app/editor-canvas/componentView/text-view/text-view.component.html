@@ -1,0 +1,5 @@
+<app-change-shape class="textarea-box animated"  [ngStyle]="getShapeStyle(data.style)" cdkDragBoundary=".big-canvas" cdkDrag (cdkDragStarted)="dragStart($event)" (cdkDragMoved)="moveDom($event)"  (cdkDragEnded)="moveDomEnd($event)" (contextmenu)="handleContextmenu($event)" [componentData]="data" [cdkDragFreeDragPosition]="{x:0,y:0}">
+    <textarea (click)="setCurrentComponent($event)" [ngStyle]="{'text-align':data.style['text-align'],'border-width':data.style['border-width']+'px','border-color':data.style['border-color'],'border-radius':data.style['border-radius']+'px','font-weight':data.style['font-weight'],'letter-spacing':data.style['letter-spacing'],color:data.style.color,'background-color':data.style['background-color']}" [(ngModel)]="data.propValue"></textarea>
+</app-change-shape>
+<app-mark-line [data]="moveData" [componentData]="data" #line>
+</app-mark-line>

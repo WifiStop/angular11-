@@ -1,0 +1,31 @@
+.point{
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 4px;
+    position:absolute;
+    border: 1px solid #59c7f9;
+    border-radius: 100%;
+    transform: translate(-4px, -4px);
+    z-index: 9999;
+  
+}
+i{
+    cursor: pointer;
+}
+.whirl{
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: grab;
+    color: #59c7f9;
+    font-size: 20px;
+    font-weight: normal;
+
+    &:active {
+        cursor: grabbing;
+    }
+}

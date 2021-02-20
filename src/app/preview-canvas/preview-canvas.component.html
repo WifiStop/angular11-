@@ -1,0 +1,18 @@
+<div class="big-canvas" id="bigCanvas" [ngStyle]="{width:canvasSize.width+'px',height:canvasSize.height+'px'}" >
+    <ng-container style="display: block;">
+            <ng-container *ngFor="let component of componentDataList">
+                    <ng-container [ngSwitch]="component.componentType">
+                            <ng-container *ngSwitchCase="'text'" >
+                                   <app-preview-text-view [data]="component" ></app-preview-text-view>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="'button'" >
+                                    <app-preview-button-view [data]="component" ></app-preview-button-view>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="'Picture'" >
+                                    <app-preview-img-view [data]="component" ></app-preview-img-view>
+                                </ng-container>
+                    </ng-container>
+            </ng-container>
+    </ng-container>
+  
+</div>

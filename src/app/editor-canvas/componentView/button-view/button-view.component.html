@@ -1,0 +1,8 @@
+
+<app-change-shape #component [ngStyle]="getShapeStyle(data.style)" cdkDragBoundary=".big-canvas" cdkDrag (cdkDragEnded)="moveDomEnd($event)" (cdkDragMoved)="moveDom($event)" (cdkDragStarted)="dragStart($event)"(contextmenu)="handleContextmenu($event)" [componentData]="data" [cdkDragFreeDragPosition]="{x:0,y:0}" class="animated">
+    
+    <button  (click)="setCurrentComponent($event)" [ngStyle]="{'text-align':data.style['text-align'],'border-width':data.style['border-width']+'px','border-color':data.style['border-color'],'border-radius':data.style['border-radius']+'px','font-weight':data.style['font-weight'],'letter-spacing':data.style['letter-spacing']+'px',color:data.style.color,'background-color':data.style['background-color']}">{{data.propValue}}</button>
+   
+</app-change-shape>
+<app-mark-line [data]="moveData" [componentData]="data" #line>
+</app-mark-line>

@@ -1,0 +1,6 @@
+<div class="component">
+    <div  *ngFor="let component of componentList" class="component-box " draggable="true" (dragstart)="dragstart($event,component)">
+        <!-- <i>{{component.icon}}</i> -->
+        <span >{{component.label}}</span>
+    </div>
+</div>

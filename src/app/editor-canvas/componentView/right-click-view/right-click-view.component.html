@@ -1,0 +1,8 @@
+<ul *ngIf="!isCanvas;else canvasUtil">
+    <li *ngFor="let menu of menuList" (click)="auxiliaryCall(menu.eventFnName);" >{{menu.ability}}</li>
+</ul>
+<ng-template #canvasUtil>
+<ul >
+    <li (click)="auxiliaryCall('pasteComponentFn');" >粘贴</li>
+</ul>
+</ng-template>

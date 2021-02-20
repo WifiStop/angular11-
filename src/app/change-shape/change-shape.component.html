@@ -1,0 +1,7 @@
+    <div *ngIf="isShowShape()" style="text-align: center;">
+        <div #circle  *ngFor="let dots of  list" class="point" [ngStyle]="getStyle(dotsSeatObj[dots])" change-size [type]="dots" [data]="componentData"  (showMenu)="getDotsSeat()"></div>
+    </div>
+    <div #parentComponent style="height: 100%;width: 100%;position: relative;" >
+        <i *ngIf="isShowShape()" class="icon-xuanzhuan iconfont whirl"  (mousedown)="spinComponent($event)"></i>
+        <ng-content></ng-content>
+    </div>

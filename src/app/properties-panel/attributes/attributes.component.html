@@ -1,0 +1,74 @@
+<div *ngIf="componentData?.style['z-index']" class="attributes">
+    <div class="animate__animated animate__bounce">
+        <span>宽</span>
+        <input nz-input [(ngModel)]="componentData.style.width" (ngModelChange)="calculation()"/>
+    </div>
+    <div>
+        <span>高</span>
+        <input nz-input [(ngModel)]="componentData.style.height" (ngModelChange)="calculation()"/>
+    </div>
+    <div *ngIf="componentData.componentType=='button'">
+        <span>边框宽度</span>
+        <input nz-input [(ngModel)]="componentData.style['border-width']"/>
+    </div>
+    <div *ngIf="componentData.componentType=='button'">
+        <span>边框颜色</span>
+        <input  [(colorPicker)]="borderColor" (colorPickerChange)="componentData.style['border-color'] =$event"
+        [style.background]="borderColor"
+       />
+
+    </div>
+    <div *ngIf="componentData.componentType=='button'">
+        <span>边框半径</span>
+        <input nz-input [(ngModel)]="componentData.style['border-radius']"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>字体大小</span>
+        <input nz-input [(ngModel)]="componentData.style['font-size']"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>字体粗细</span>
+        <input nz-input  [(ngModel)]="componentData.style['font-weight']"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>字间距</span>
+        <input nz-input [(ngModel)]="componentData.style['letter-spacing']"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>对齐方式</span>
+        <nz-select [(ngModel)]="componentData.style['text-align']" style="width: 165px;">
+            <nz-option nzValue="left" nzLabel="左对齐"></nz-option>
+            <nz-option nzValue="center" nzLabel="居中"></nz-option>
+            <nz-option nzValue="right" nzLabel="右对齐" ></nz-option>
+          </nz-select>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>颜色</span>
+        <input  [(colorPicker)]="color" (colorPickerChange)="componentData.style.color =$event"
+        [style.background]="color"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>背景色</span>
+        <input  [(colorPicker)]="backgroundColor" (colorPickerChange)="componentData.style['background-color'] =$event"
+        [style.background]="backgroundColor"/>
+    </div>
+    <div>
+        <span>透明度</span>
+        <input placeholder="请输入0-1" nz-input [(ngModel)]="componentData.style.opacity"/>
+    </div>
+    <div>
+        <span>y坐标</span>
+        <input nz-input [(ngModel)]="componentData.style.top"/>
+    </div>
+    <div>
+        <span>x坐标</span>
+        <input nz-input [(ngModel)]="componentData.style.left"/>
+    </div>
+    <div *ngIf="componentData.componentType!='Picture'">
+        <span>内容</span>
+        <input nz-input [(ngModel)]="componentData.propValue"/>
+    </div>
+</div>
+<div *ngIf="!componentData?.style['z-index']">
+请先选择组件
+</div>

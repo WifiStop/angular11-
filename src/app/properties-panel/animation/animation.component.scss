@@ -1,0 +1,43 @@
+.animation {
+  .animation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin: 0px 5px;
+    }
+  }
+
+  .animation-tag {
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
+    margin: auto;
+    >div {
+      display: flex;
+      justify-content: center;
+      nz-tag {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.animation-box {
+  display: flex;
+  flex-flow: wrap;
+  overflow-y: scroll;
+  flex-shrink: 0;
+  height: calc(100vh - 110px);
+
+  div {
+    width: 100px;
+    height: 60px;
+    background: #f5f8fb;
+    text-align: center;
+    margin: 5px;
+    line-height: 60px;
+  }
+
+
+}

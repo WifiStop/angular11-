@@ -1,0 +1,19 @@
+.component {
+  height: 100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  .component-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 40%;
+    border: 1px solid #ddd;
+    margin: 5px 0px 5px;
+    cursor: pointer;
+    // padding: 5px 15px;
+  }
+}

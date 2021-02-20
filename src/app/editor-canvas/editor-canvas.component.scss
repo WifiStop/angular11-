@@ -1,0 +1,13 @@
+.big-canvas{
+    height: 100%;
+    background-color: #fff;
+    flex-shrink:0;
+    position: relative;
+    app-right-click-view{
+        display: block;
+        width: 64px;
+        height: 172px;
+        position: absolute;
+        z-index: 9999;
+    }
+}
