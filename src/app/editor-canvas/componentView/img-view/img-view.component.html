@@ -1,5 +1,5 @@
     <app-change-shape class="img-seat animated" [ngStyle]="getShapeStyle(data.style)" cdkDragBoundary=".big-canvas" cdkDrag (cdkDragStarted)="dragStart($event)" (cdkDragEnded)="moveDomEnd($event)"(cdkDragMoved)="moveDom($event)" (contextmenu)="handleContextmenu($event)" [componentData]="data" [cdkDragFreeDragPosition]="{x:0,y:0}">
-        <img  src="../../../../assets/img/dog.jpeg" style="width: 100%;height: 100%;" (click)="setCurrentComponent($event)">
+        <img  src={{data.propValue}} style="width: 100%;height: 100%;" (click)="setCurrentComponent($event)">
     </app-change-shape>
     <app-mark-line [data]="moveData" [componentData]="data" #line>
     </app-mark-line>

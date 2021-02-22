@@ -19,6 +19,7 @@ export class CommunicationService {
   private pointCoordinate: share.pointType = {};
   public getDotsSeat!:Function
   public previewAnimationList$ = new Subject()
+  public zIndex:number=0//组件层级索引
   constructor(
 
   ) { }

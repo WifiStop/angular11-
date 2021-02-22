@@ -58,6 +58,7 @@ export class domUtil implements AdComponent, OnInit, OnDestroy {
     this.moveData = _.cloneDeep(this.data)
     this.left = this.data.style.left//记录移动开始位置
     this.top = this.data.style.top
+    console.log(this.left,this.top)
   }
   ngAfterViewInit() {
 

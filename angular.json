@@ -96,7 +96,7 @@
             "styles": [
               "node_modules/animate.css/animate.css",
               "src/styles.scss"
-              ],
+            ],
             "scripts": []
           }
         },
@@ -124,6 +124,10 @@
               "devServerTarget": "mobileComponents:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

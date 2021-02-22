@@ -17,7 +17,6 @@ export class EditorCanvasComponent implements OnInit {
   position!: share.position
   data!: share.componentList;
   isShowMenu: boolean = false
-  zIndex: number = 0
   isCanvas: boolean = false
   constructor(private _communicationService: CommunicationService,
     private _componentFactoryResolver: ComponentFactoryResolver,
@@ -35,11 +34,14 @@ export class EditorCanvasComponent implements OnInit {
     let cache = window.localStorage.getItem('data')
     if (!cache) return
     let cacheData = <share.componentList[]>(JSON.parse(cache))
+    if(cacheData.length==0) return
     this._communicationService.setComponentDataList(cacheData)
     let max = Math.max.apply(Math, this.componentDataList.map((item) =>{
       return item.style['z-index'] << 0 
     }));
-    this.zIndex = max
+    console.log()
+    this._communicationService.zIndex = max
+    this._communicationService.setOperatingList()
   }
   ngAfterViewInit() {
   }
@@ -53,7 +55,7 @@ export class EditorCanvasComponent implements OnInit {
     data.style.top = event.offsetY
     data.style.left = event.offsetX
     data.id = this.genID(10)
-    data.style['z-index'] = ++this.zIndex
+    data.style['z-index'] = ++this._communicationService.zIndex
     this._communicationService.setComponentDataList(data)
     this._communicationService.setOperatingList()
   }
@@ -68,7 +70,7 @@ export class EditorCanvasComponent implements OnInit {
     for(let style in this._communicationService.menuSeat){
       copyComponent.style[style] = this._communicationService.menuSeat[style]
     }
-    copyComponent.style['z-index'] = ++this.zIndex
+    copyComponent.style['z-index'] = ++this._communicationService.zIndex
     this._communicationService.setComponentDataList(copyComponent)
     this._communicationService.setOperatingList()
   }

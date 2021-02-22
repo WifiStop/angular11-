@@ -53,7 +53,7 @@ const list:share.componentList[] = [
         componentType: 'Picture', 
         label: '图片', 
         icon: 'el-icon-picture',
-        propValue: '',
+        propValue: "assets/img/dog.jpeg",
         animations: [],
         events: {},
         style: {

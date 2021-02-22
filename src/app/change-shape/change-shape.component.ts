@@ -72,7 +72,7 @@ export class ChangeShapeComponent implements OnInit, OnChanges {
       const rotateDegreeAfter = Math.atan2(curY - centerY, curX - centerX) / (Math.PI / 180)
       // 获取旋转的角度值
       this.componentData.style.rotate = rotate + rotateDegreeAfter - rotateDegreeBefore
-      
+      console.log(this.componentData.style.rotate,"=====")
     }
     const up = (event:any) => {
       document.removeEventListener('mousemove', move)
