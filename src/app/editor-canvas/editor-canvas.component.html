@@ -1,4 +1,4 @@
-<div class="big-canvas" id="bigCanvas" [ngStyle]="{width:canvasSize.width+'px',height:canvasSize.height+'px'}" (dragover)="dragOver($event)" (drop)="handleDrop($event)" (contextmenu)="handleContextmenu($event)" (click)="setCurrentComponent()">
+<div class="big-canvas" id="bigCanvas" [ngStyle]="{width:canvasSize.width,height:canvasSize.height+'px'}" (dragover)="dragOver($event)" (drop)="handleDrop($event)" (contextmenu)="handleContextmenu($event)" (click)="setCurrentComponent()">
                 <ng-container style="display: block;">
                         <ng-container *ngFor="let component of componentDataList">
                                 <ng-container [ngSwitch]="component.componentType">

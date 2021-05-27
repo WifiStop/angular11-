@@ -56,9 +56,8 @@ export class domUtil implements AdComponent, OnInit, OnDestroy {
     event.source.reset()
     event.source._dragRef._initialTransform = `rotate(${this.data.style.rotate}deg)`;
     this.moveData = _.cloneDeep(this.data)
-    this.left = this.data.style.left//记录移动开始位置
-    this.top = this.data.style.top
-    console.log(this.left,this.top)
+    this.left = Number(this.data.style.left)//记录移动开始位置
+    this.top = Number(this.data.style.top)
   }
   ngAfterViewInit() {
 

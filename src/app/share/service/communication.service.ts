@@ -13,7 +13,7 @@ export class CommunicationService {
   public copyComponentData!: share.componentList//当前复制组件的数据
   public menuSeat!: share.position//菜单的位置
   public currentComponent!:share.componentList;
-  public canvasSize: share.size = { width: 1200, height: 740 }//画布大小
+  public canvasSize: share.size = { width: '100%', height: 740 }//画布大小
   private operatingList: share.componentList[][] = []//操作列表
   public operatingIndex: number = -1
   private pointCoordinate: share.pointType = {};

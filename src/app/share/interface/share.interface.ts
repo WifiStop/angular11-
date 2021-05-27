@@ -11,7 +11,7 @@ export namespace share{
         br:Partial<CSSStyleDeclaration>|number,
     }
     export interface size{
-        width:number,
+        width:number|string,
         height:number
     }
     export interface componentList {
