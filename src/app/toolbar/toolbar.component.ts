@@ -49,7 +49,7 @@ export class ToolbarComponent implements OnInit {
   //预览
   preview() {
     const dialogRef = this.dialog.open(PreviewCanvasComponent, {
-      data: {}
+      data: {width: 1200}
     });
   }
   //插入图片
